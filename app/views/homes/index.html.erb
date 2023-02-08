@@ -5,10 +5,9 @@
   </div>
   <div class="z-10 bg-base-100 -mt-4 md:p-8 p-4 rounded-t-2xl">
     <div class="flex flex-col text-center w-full py-8">
-        <h1 class="md:text-2xl text-xl font-semibold">VW Borobudur Enjoy </h1>
-        <h3 class="md:text-xl text-lg text-primary"> Sempurnakan liburanmu bersama kami </h3>
+      <h1 class="md:text-2xl text-xl font-semibold">VW Borobudur Enjoy </h1>
+      <h3 class="md:text-xl text-lg text-primary"> Sempurnakan liburanmu bersama kami </h3>
     </div>
-
     <%# call out %>
     <div class="card bg-primary p-4">
       <span class="card-title md:text-lg text-base">Tentukan jadwal liburanmu sekarang!</span>
@@ -17,18 +16,6 @@
           <div class="w-full flex flex-col md:items-start">
             <label for="tanggal" class="label label-text">Tanggal</label>
             <input type="date" id="tanggal" class="input input-bordered w-full border-2 border-gray-700" required>
-          </div>
-          <div class="flex flex-col md:items-start">
-            <label for="jam" class="label label-text">Jam</label>
-            <select class="form-control select select-bordered border-2 border-gray-700" required>
-              <option>09 : 00</option>
-              <option>10 : 00</option>
-              <option disabled>11 : 00</option>
-              <option>12 : 00</option>
-              <option>13 : 00</option>
-              <option>14 : 00</option>
-              <option>15 : 00</option>
-            </select>
           </div>
           <div class="flex md:items-end">
             <input type="submit" value="Pilih" class="w-full btn btn-info border-2 hover:border-base-100 hover:text-base-100 border-gray-700">
@@ -43,10 +30,10 @@
         <div class="card-body">
           <div class="card-title flex justify-between md:text-lg text-base">
             <h2>Short Trip</h2>
-            <h2 class="text-primary">350K/VW</h2>
+            <h2 class="text-primary">400K/VW</h2>
           </div>
           <div class="flex flex-col items-end md:text-base text-sm">
-            <p>2 Destinasi Wisata</p>
+            <p>2 Destinasi Wisata + Spot Foto</p>
             <p>Durasi 2 jam</p>
           </div>
         </div>
@@ -55,10 +42,10 @@
         <div class="card-body">
           <div class="card-title flex justify-between md:text-lg text-base">
             <h2>Medium</h2>
-            <h2 class="text-primary">450K/VW</h2>
+            <h2 class="text-primary">550K/VW</h2>
           </div>
           <div class="flex flex-col items-end md:text-base text-sm">
-            <p>3 Destinasi Wisata</p>
+            <p>3 Destinasi Wisata + Spot Foto</p>
             <p>Durasi 3 jam</p>
           </div>
         </div>
@@ -67,11 +54,23 @@
         <div class="card-body">
           <div class="card-title flex justify-between md:text-lg text-base">
             <h2>Long</h2>
-            <h2 class="text-primary">650K/VW</h2>
+            <h2 class="text-primary">700K/VW</h2>
           </div>
           <div class="flex flex-col items-end md:text-base text-sm">
-            <p>4 Destinasi Wisata</p>
-            <p>Durasi 5 jam</p>
+            <p>4 Destinasi Wisata + Spot Foto</p>
+            <p>Durasi 4 jam</p>
+          </div>
+        </div>
+      </div>
+      <div class="card w-full bg-white border-2 border-gray-700">
+        <div class="card-body">
+          <div class="card-title flex justify-between md:text-lg text-base">
+            <h2>One Day</h2>
+            <h2 class="text-primary">700K/VW</h2>
+          </div>
+          <div class="flex flex-col items-end md:text-base text-sm">
+            <p>6 Destinasi Wisata + Spot Foto</p>
+            <p>Durasi 8 jam</p>
           </div>
         </div>
       </div>
@@ -79,95 +78,100 @@
         <div class="card-body">
           <div class="card-title flex justify-between md:text-lg text-base">
             <h2>Sunrise</h2>
-            <h2 class="text-primary">500K/VW</h2>
+            <h2 class="text-primary">600K/VW</h2>
           </div>
           <div class="flex flex-col items-end md:text-base text-sm">
-            <p>3 Destinasi Wisata</p>
-            <p>Durasi 3,5 jam</p>
+            <p>2 Destinasi Wisata + Spot Foto</p>
+            <p>Durasi 3 jam</p>
           </div>
         </div>
       </div>
     </div>
     <%# carousel %>
     <div class="mt-4 space-y-4">
-      <span class="card-title md:text-lg text-base">Daftar Destinasi</span>
+      <span class="card-title md:text-lg text-base">Destinasi Wisata</span>
       <div class="carousel carousel-center p-4 space-x-4 max-w-md h-48 bg-base-200 rounded-box">
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item image-full w-64 card opacity-90">
+          <figure><img src="<%= asset_path('junk-yard.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Junk Yard</h2>
+            <h2 class="card-title text-base-100">Junk Yard</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('svarga-bhumi.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Svarga Bumi</h2>
+            <h2 class="card-title text-base-100">Svarga Bumi</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('gereja-ayam.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Gereja Ayam</h2>
+            <h2 class="card-title text-base-100">Gereja Ayam</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('taman-kelinci.jpg') %>" alt="" class="object-bottom h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Taman Kelinci</h2>
+            <h2 class="card-title text-base-100">Taman Kelinci</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('punthuk-setumbu.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Punthuk Setumbu</h2>
+            <h2 class="card-title text-base-100">Punthuk Setumbu</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+      </div>
+    </div>
+    <div class="mt-4 space-y-4">
+      <span class="card-title md:text-lg text-base">Wisata Edukasi</span>
+      <div class="carousel carousel-center p-4 space-x-4 max-w-md h-48 bg-base-200 rounded-box">
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('wisata-vw.jpg') %>" alt="" class="object-cover h-full w-full"/></figure>
           <div class="card-body">
-            <h2 class="card-title">Batik</h2>
+            <h2 class="card-title text-base-100">Batik</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('wisata-vw.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Gula Jawa</h2>
+            <h2 class="card-title text-base-100">Gula Jawa</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('wisata-vw.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Kopi Luwak</h2>
+            <h2 class="card-title text-base-100">Kopi Luwak</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('wisata-vw.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Rengginang</h2>
+            <h2 class="card-title text-base-100">Rengginang</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('wisata-vw.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Jamur Borobudur</h2>
+            <h2 class="card-title text-base-100">Jamur Borobudur</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('wisata-vw.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Kerajinan Gerabah</h2>
+            <h2 class="card-title text-base-100">Kerajinan Gerabah</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('wisata-vw.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Peternakan Lebah</h2>
+            <h2 class="card-title text-base-100">Peternakan Lebah</h2>
           </div>
         </div>
-        <div class="carousel-item w-300px card bg-base-100 image-full">
-          <figure><img src="https://placeimg.com/400/225/nature" alt="Shoes" /></figure>
+        <div class="carousel-item w-64 card bg-base-100 image-full opacity-90">
+          <figure><img src="<%= asset_path('wisata-vw.jpg') %>" alt="" class="object-cover h-full w-full" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Peternakan Kambing</h2>
+            <h2 class="card-title text-base-100">Peternakan Kambing</h2>
           </div>
         </div>
       </div>
